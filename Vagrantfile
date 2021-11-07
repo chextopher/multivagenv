@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
          vb.cpus = "# of cpus"
      end
      webS.vm.provision "shell", inline: <<-SHELL
-         uptime
+         run your commands
         SHELL
      end
 
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
           vb.cpus = "# of cpus"
       end
     dbS.vm.provision "shell", inline: <<-SHELL
-          lscpu
+          run your commands
          SHELL
       end
  
@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
           vb.cpus = "# of cpus"
       end
     phpS.vm.provision "shell", inline: <<-SHELL
-          cat /etc/*release
+          run your commands
          SHELL
       end
  
