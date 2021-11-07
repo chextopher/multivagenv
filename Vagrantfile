@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
        webS.vm.network "public_network"
      config.vm.synced_folder ".", "/var/www/html"
      webS.vm.provider "virtualbox" do |vb|
+         vb.gui = true
          vb.memory = "mem size"
          vb.name = "name of vb"
          vb.cpus = "# of cpus"
@@ -24,6 +25,7 @@ Vagrant.configure("2") do |config|
         dbS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
     dbS.vm.provider "virtualbox" do |vb|
+          vb.gui = true
           vb.memory = "mem size"
           vb.name = "name of vb"
           vb.cpus = "# of cpus"
@@ -41,6 +43,7 @@ Vagrant.configure("2") do |config|
         phpS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
     phpS.vm.provider "virtualbox" do |vb|
+          vb.gui = true
           vb.memory = "mem size"
           vb.name = "name of vb"
           vb.cpus = "# of cpus"
@@ -58,6 +61,7 @@ Vagrant.configure("2") do |config|
         lbS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
     lbS.vm.provider "virtualbox" do |vb|
+          vb.gui = true
           vb.memory = "input your mem size"
           vb.name = "input name of vb(lbS)"
           vb.cpus = "input size of cpu"
