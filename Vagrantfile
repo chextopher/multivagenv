@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
 
      config.vm.define "webS" do |webS|
-       webS.vm.box = "choose source of server from vagarnt cloud"
+       webS.vm.box = "choose source of server from vagrant cloud"
        webS.vm.hostname = "input hostName"
        webS.vm.network "private_network", ip: "input your ip address"
        webS.vm.network "public_network"
