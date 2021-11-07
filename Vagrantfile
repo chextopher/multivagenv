@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
      config.vm.define "webS" do |webS|
        webS.vm.box = "choose source of server from vagrant cloud"
        webS.vm.hostname = "input hostName"
-       webS.vm.network "private_network", ip: "input your ip address"
+       webS.vm.network "private_network", ip: "input any ip address not in your network"
        webS.vm.network "public_network"
      config.vm.synced_folder ".", "/var/www/html"
      webS.vm.provider "virtualbox" do |vb|
@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "dbS" do |dbS|
         dbS.vm.box = "choose source of server from vagarnt cloud"
         dbS.vm.hostname = "input hostName"
-        dbS.vm.network "private_network", ip: "input your ip address"
+        dbS.vm.network "private_network", ip: "input any ip address not in your network"
         dbS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
     dbS.vm.provider "virtualbox" do |vb|
@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "phpS" do |phpS|
         phpS.vm.box = "choose source of server from vagarnt cloud"
         phpS.vm.hostname = "input hostName"
-        phpS.vm.network "private_network", ip: "input your ip address"
+        phpS.vm.network "private_network", ip: "input any ip address not in your network"
         phpS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
     phpS.vm.provider "virtualbox" do |vb|
@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "lbS" do |lbS|
         lbS.vm.box = "source of the server from vagrant cloud"
         lbS.vm.hostname = "input hostName"
-        lbS.vm.network "private_network", ip: "input your ip"
+        lbS.vm.network "private_network", ip: "input any ip address not in your network"
         lbS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
     lbS.vm.provider "virtualbox" do |vb|
