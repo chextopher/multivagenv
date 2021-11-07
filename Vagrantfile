@@ -1,15 +1,15 @@
 Vagrant.configure("2") do |config|
 
      config.vm.define "webS" do |webS|
-       webS.vm.box = "ubuntu/bionic64"
-       webS.vm.hostname = "webS"
-       webS.vm.network "private_network", ip: "192.168.10.88"
+       webS.vm.box = "choose source of server from vagarnt cloud"
+       webS.vm.hostname = "input hostName"
+       webS.vm.network "private_network", ip: "input your ip address"
        webS.vm.network "public_network"
      config.vm.synced_folder ".", "/var/www/html"
      webS.vm.provider "virtualbox" do |vb|
-         vb.memory = "1500"
-         vb.name = "webS"
-         vb.cpus = "2"
+         vb.memory = "mem size"
+         vb.name = "name of vb"
+         vb.cpus = "# of cpus"
      end
      webS.vm.provision "shell", inline: <<-SHELL
          uptime
@@ -18,15 +18,15 @@ Vagrant.configure("2") do |config|
 
 
     config.vm.define "dbS" do |dbS|
-        dbS.vm.box = "ubuntu/bionic64"
-        dbS.vm.hostname = "dbS"
-        dbS.vm.network "private_network", ip: "192.168.10.89"
+        dbS.vm.box = "choose source of server from vagarnt cloud"
+        dbS.vm.hostname = "input hostName"
+        dbS.vm.network "private_network", ip: "input your ip address"
         dbS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
     dbS.vm.provider "virtualbox" do |vb|
-          vb.memory = "1500"
-          vb.name = "dbS"
-          vb.cpus = "1"
+          vb.memory = "mem size"
+          vb.name = "name of vb"
+          vb.cpus = "# of cpus"
       end
     dbS.vm.provision "shell", inline: <<-SHELL
           lscpu
@@ -35,15 +35,15 @@ Vagrant.configure("2") do |config|
  
 
     config.vm.define "phpS" do |phpS|
-        phpS.vm.box = "centos/7"
-        phpS.vm.hostname = "phpS"
-        phpS.vm.network "private_network", ip: "192.168.10.90"
+        phpS.vm.box = "choose source of server from vagarnt cloud"
+        phpS.vm.hostname = "input hostName"
+        phpS.vm.network "private_network", ip: "input your ip address"
         phpS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
     phpS.vm.provider "virtualbox" do |vb|
-          vb.memory = "1024"
-          vb.name = "phpS"
-          vb.cpus = "1"
+          vb.memory = "mem size"
+          vb.name = "name of vb"
+          vb.cpus = "# of cpus"
       end
     phpS.vm.provision "shell", inline: <<-SHELL
           cat /etc/*release
@@ -52,8 +52,8 @@ Vagrant.configure("2") do |config|
  
 
     config.vm.define "lbS" do |lbS|
-        lbS.vm.box = "source of the server "
-        lbS.vm.hostname = "lbS"
+        lbS.vm.box = "source of the server from vagrant cloud"
+        lbS.vm.hostname = "input hostName"
         lbS.vm.network "private_network", ip: "input your ip"
         lbS.vm.network "public_network"
     config.vm.synced_folder ".", "/var/www/html"
