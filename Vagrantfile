@@ -51,18 +51,18 @@ Vagrant.configure("2") do |config|
       end
  
 
-    #config.vm.define "lbS" do |lbS|
-     #   lbS.vm.box = "source of the server "
-      #  lbS.vm.hostname = "lbS"
-       # lbS.vm.network "private_network", ip: "input your ip"
-       # lbS.vm.network "public_network"
-    #config.vm.synced_folder ".", "/var/www/html"
-    #lbS.vm.provider "virtualbox" do |vb|
-     #     vb.memory = "input your mem size"
-      #    vb.name = "input name of vb(lbS)"
-       #   vb.cpus = "input size of cpu"
-      #end
-   # c3onfig.vm.provision "shell" , path: "script.sh"
-  #  end
+    config.vm.define "lbS" do |lbS|
+        lbS.vm.box = "source of the server "
+        lbS.vm.hostname = "lbS"
+        lbS.vm.network "private_network", ip: "input your ip"
+        lbS.vm.network "public_network"
+    config.vm.synced_folder ".", "/var/www/html"
+    lbS.vm.provider "virtualbox" do |vb|
+          vb.memory = "input your mem size"
+          vb.name = "input name of vb(lbS)"
+          vb.cpus = "input size of cpu"
+      end
+    config.vm.provision "shell" , path: "script.sh"
+    end
 end
  
